@@ -7,6 +7,15 @@
 body{
 	font-family: 'Raleway', sans-serif;
 	font-size: 20px;
+	animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s both;
+}
+@keyframes fade-in{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .contenedorPadreIndex{
 	display: grid;
@@ -93,12 +102,14 @@ body{
 	margin-left: 250px;
     margin-right: 250px;
     border-radius: 15px;
-    transition: all 3s;
+    transition: all 1s;
 }
 .menu:hover{
 	background: rgb(129,25,53);
 	background: linear-gradient(198deg, rgba(129,25,53,1) 0%, rgba(54,21,78,1) 100%);
+	box-shadow: 0px 0px 4px 4px #65346b;
 }
+
 .elementos{
 	display: flex;
 	flex-direction: row;
@@ -134,16 +145,29 @@ body{
     background-size: cover;
     padding-bottom: 15px;
     padding-top: 15px;
+    text-shadow: -5px 3px 10px #7f1936;
 }
 .estiloMayorBanner{
 	font-size: 100px;
 	font-weight: 800;
 	color: #fff;
+	animation: text-focus-in 1.3s linear both;
 }
 .estiloMenorBanner{
 	font-size: 30px;
 	font-weight: 800;
 	color: #fff;
+	animation: text-focus-in 1.3s linear both;
+}
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 .descripcion{
 	grid-area: descripcion;
@@ -154,6 +178,10 @@ body{
     width: 80%;
     justify-self: center;
     border-radius: 60px;
+    transition: all 1s;
+}
+.descripcion:hover{
+	box-shadow: 0px 0px 6px 6px #65346b;
 }
 .intro{
 	display: flex;
@@ -189,6 +217,10 @@ body{
     border-radius: 60px;
     display: flex;
     align-items: center;
+    transition: all 0.5s;
+}
+.bloquesInfo:hover{
+	transform: scale(1.03);
 }
 .obras{
 	grid-area: obras;
@@ -211,14 +243,25 @@ body{
 	justify-content: center;
 	align-items: center;
 	font-size: 20px;
+	transition: all 0.5s;
+}
+.bloquesObras:hover{
+	transform: scale(1.05);
 }
 .bloquesObras div img{
 	width: 300px;
+	transition: all 1s;
+}
+.bloquesObras:hover div img{
+	box-shadow: 0px 0px 3px 3px #d77772b3;
 }
 .descripcionObras{
 	width: 150px;
-	height: 50px;
-	font-size: 15px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    margin: 13px;
+    line-height: 1.8;
 }
 .quienesSomos{
 	grid-area: quienesSomos;
@@ -236,6 +279,20 @@ body{
     margin-left: 1rem;
     align-self: flex-start;
     color: white;
+    animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 .blanco{
 	color: white;
@@ -249,6 +306,7 @@ body{
     align-self: flex-end;
     background-color: rgba(0, 0, 0, .6);
     color: white;
+    animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 #parrafo2{
 	font-size: 30px;
@@ -259,6 +317,17 @@ body{
     align-self: flex-start;
     background-color: rgba(0, 0, 0, .6);
     color: white;
+    animation: fade-in-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes fade-in-left{
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 form div input, select{
 	font-size: 18px;
