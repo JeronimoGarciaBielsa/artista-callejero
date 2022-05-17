@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+.contenedorPadreIndex{
+	display: grid;
+	grid-template-areas:
+		"header"
+		"nav"
+		"hero"
+		"descripcion"
+		"obras"
+		"footer";
+	grid-template-rows: repeat(6, auto);
+	grid-row-gap: 7px;
+}
+.contenedorPadreQS{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"nav"
+	"quienesSomos"
+	"footer" ;
+	grid-template-rows: repeat(4, auto);
+	grid-row-gap: 7px;	
+}
+.contenedorPadreExp{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"hero"
+	"expresate"
+	"noDefinido"
+	"footer" ;
+	grid-template-rows: repeat(4, auto);
+	grid-row-gap: 7px;	
+}
+.contenedorPadreOA{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"nav"
+	"hero"
+	"obrasDeArte"
+	"footer" ;
+	grid-template-rows: repeat(4, auto);
+	grid-row-gap: 7px;
+}
+.contenedorPadreContacto{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"nav"
+	"contacto"
+	"footer" ;
+	grid-template-rows: repeat(4, auto);
+	grid-row-gap: 7px;
+}
+.header{
+	grid-area: header;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+}	
+.logo{
+	align-self: center;
+}
+.logo img{
+    width: 185px;
+}
+.redesSociales{
+	
+}
+.redesSociales img{
+	width: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.menu{
+	grid-area: nav;
+	padding: 10px;
+	background: rgb(129,25,53);
+	background: linear-gradient(99deg, rgba(129,25,53,1) 0%, rgba(54,21,78,1) 100%);
+	margin-left: 250px;
+    margin-right: 250px;
+    border-radius: 15px;
+    transition: all 3s;
+}
+.menu:hover{
+	background: rgb(129,25,53);
+	background: linear-gradient(198deg, rgba(129,25,53,1) 0%, rgba(54,21,78,1) 100%);
+}
+.elementos{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.menu ul li{
+	list-style-type: none;
+	font-size: 16px;
+	transition: all 0.5s;
+}
+.menu ul li:hover{
+	transform: scale(1.1);
+}	
+.menu ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	margin: 25px;
+}
+.seccionPrincipal{
+	grid-area: hero;
+    width: 100%;
+    height: 80vh;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/fondo_1.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.estiloMayorBanner{
+	font-size: 100px;
+	font-weight: 800;
+	color: #fff;
+}
+.estiloMenorBanner{
+	font-size: 30px;
+	font-weight: 800;
+	color: #fff;
+}
+.descripcion{
+	grid-area: descripcion;
+    background: rgb(129,25,53);
+	background: linear-gradient(236deg, rgba(129,25,53,1) 0%, rgba(80,22,53,1) 50%, rgba(54,21,78,1) 100%);
+    margin: 50px;
+    box-sizing: border-box;
+    width: 80%;
+    justify-self: center;
+    border-radius: 60px;
+}
+.intro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 5rem;
+	font-size: 38px;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	border-bottom: 4px solid;
+}
+.seccionInfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 40px;
+}
+.bloquesInfo{
+	margin: 40px;
+    padding: 33px;
+    width: 330px;
+    height: 200px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    border-bottom: 4px solid;
+    border-top: 4px solid;
+    color: white;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+}
+.obras{
+	grid-area: obras;
+	background: rgb(91,33,57);
+	background: linear-gradient(267deg, rgba(91,33,57,1) 24%, rgba(59,2,84,1) 74%);
+}
+.seccionObras{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 35px;
+}
+.bloquesObras{
+	margin: 10px 60px;
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+.bloquesObras div img{
+	width: 300px;
+}
+.descripcionObras{
+	width: 150px;
+	height: 50px;
+	font-size: 15px;
+}
+.quienesSomos{
+	grid-area: quienesSomos;
+	display: flex;
+	flex-direction: column;
+	background-image: url('../assets/fondo_dragon.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.semiTitulo{
+	font-size: 45px;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 1rem;
+    align-self: flex-start;
+    color: white;
+}
+.blanco{
+	color: white;
+}
+#parrafo1{
+	font-size: 30px;
+    line-height: 1.5;
+    width: 65%;
+    padding: 2rem;
+    margin: 3rem;
+    align-self: flex-end;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+}
+#parrafo2{
+	font-size: 30px;
+    line-height: 1.5;
+    width: 65%;
+    padding: 2rem;
+    margin: 3rem;
+    align-self: flex-start;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+}
+form div input, select{
+	font-size: 18px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+label{
+	color: white;
+}
+#blanco{
+	font-size: 18px;
+	color: white;
+}
+#contacto{
+	grid-area: contacto;
+	width: 40%;
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 75%);
+}
+#fondoContacto{
+	background-image: url(../assets/fondo_texturas.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 0px 30px 0px;
+}
+.inps{
+	line-height: 1.6;
+	border-radius: 10px;
+}
+.enviar{
+	padding: 10px;
+	background-color: #ee7800;
+	color: white;
+}
+.expresate{
+	grid-area: expresate;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #311D3F;
+}
+.conNosotros{
+	text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 15px;
+    background-color: #C74B50;
+    width: 32%;
+    height: 21rem;
+    color: white;
+    line-height: 1.6;
+}
+.obrasDeArte{
+	grid-area: obrasDeArte;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #88304E;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	padding: 25px;
+}
+.boxDeArte{
+	width: 30%;
+    background-color: #2c0c3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.boxDeArte img{
+	width: 180px;
+
+}
+.noDefinido{
+	grid-area: noDefinido;
+}
+.footer{
+	grid-area: footer;
+}
+@media all and (max-width: 567px){
+	.header{
+		flex-direction: column;
+		justify-content: center;	
+	}
+	.elementos{
+		flex-direction: column;
+		font-size: 24px;
+		line-height: 45px;
+		text-align: center;
+	}
+	.seccionPrincipal{
+		background-image: url('../assets/fondo_1_mq.jpg');
+		justify-content: center;
+		align-items: center;
+		padding-top: 60px;
+	}
+	.estiloMayorBanner{
+		width: 60%;
+		text-align: center;
+		font-size: 50px;
+	}
+	.estiloMenorBanner{
+		text-align: center;
+		font-size: 24px;
+	}
+	.seccionInfo{
+		flex-direction: column;
+		font-size: 55px;
+		margin-bottom: 45px;
+	}
+	.bloquesInfo{
+		margin: 20px;
+	}
+	.seccionObras{
+		flex-direction: column;
+	}
+	.quienesSomos{
+		background-image: url('../assets/fondo_dragon_mq.jpg');
+	}
+	.semiTitulo{
+		align-self: center;
+		font-size: 32px;
+    	margin: 30px 0px 5px 0px;
+    	text-align: center;
+	}
+	#parrafo1{
+		font-size: 18px;
+		width: 85%;
+		align-self: center;
+		margin-bottom: 5px;
+	}
+	#parrafo2{
+		font-size: 18px;
+		width: 85%;
+		align-self: center;
+	}
+}
+
+/*Colores
+
+#311D3F
+#88304e
+#C74B50
